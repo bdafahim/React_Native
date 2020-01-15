@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import { Button, View, TouchableOpacity,Text } from "react-native";
+import { Button, View, TouchableOpacity,Text, StyleSheet } from "react-native";
 import DateTimePicker from "react-native-modal-datetime-picker";
 import moment from "moment"
 
 export default class DateTimePickerTester extends Component {
   constructor(props) {
     super(props);
+    var date = new Date();
     this.state = {
       isDateTimePickerVisible: false,
-      chosenDate: ''
+      chosenDate: moment(date).format('MMMM Do, YYYY'),
 
     };
   }
@@ -25,7 +26,7 @@ export default class DateTimePickerTester extends Component {
     console.log("A date has been picked: ", date);
     this.hideDateTimePicker();
     this.setState({
-        chosenDate: moment(date).format('MMMM, Do YYYY')
+        chosenDate: moment(date).format('MMMM Do, YYYY')
     })
   };
 
@@ -34,7 +35,9 @@ export default class DateTimePickerTester extends Component {
       <>
         {/* <Button title="Show DatePicker" onPress={this.showDateTimePicker} /> */}
         <TouchableOpacity onPress= {this.showDateTimePicker}>
-            <Text>{this.state.chosenDate}</Text>
+            <Text
+            style = {styles.dateStyle}
+            >{this.state.chosenDate}</Text>
         </TouchableOpacity>
         <DateTimePicker
           isVisible={this.state.isDateTimePickerVisible}
@@ -45,3 +48,11 @@ export default class DateTimePickerTester extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+    dateStyle: {
+      fontSize: 20,
+      color: '#8742b8'
+
+    }
+  })
