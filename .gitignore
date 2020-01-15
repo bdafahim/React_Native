@@ -9,6 +9,8 @@ npm-debug.*
 *.orig.*
 web-build/
 web-report/
+metro-cache/
+haste-map-metro-4-c41b9eb33ab4c63a0f5b41618cfa1a9c-7c79dc105f33c5237826d6dba0facc23
 
 # macOS
 .DS_Store

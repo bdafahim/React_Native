@@ -14,6 +14,10 @@ const HomeScreen = ({navigation}) => {
     onPress={() => navigation.navigate('DateTime')}
     title="Go to Date time Picker" 
     />
+    <Button 
+    onPress={() => navigation.navigate('Count')}
+    title="Go to Counter Screen" 
+    />
     </View>
   ); 
 
