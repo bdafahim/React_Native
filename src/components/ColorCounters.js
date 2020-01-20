@@ -5,8 +5,6 @@ const ColorCounters = ({ color, onIncrease, onDecrease }) => {
   return (
     <View>
       <Text>{color}</Text>
-      {/* <Button onPress={() => onIncrease()} title={`Increase ${color}`} />
-      <Button onPress={() => onDecrease()} title={`Decrease ${color}`} /> */}
 
       <TouchableOpacity onPress={() => onIncrease()} style={styles.buttonStyle}>
         <Text style={styles.text}>{`Increase ${color}`}</Text>

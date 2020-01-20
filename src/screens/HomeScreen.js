@@ -6,24 +6,6 @@ const HomeScreen = ({ navigation }) => {
     <View>
       <Text style={styles.textHome}>Welcome</Text>
 
-      {/* <Button
-        style={styles.buttonStyle}
-        onPress={() => navigation.navigate("Library")}
-        title="Go to Library"
-      /> */}
-      {/* <Button
-        onPress={() => navigation.navigate("DateTime")}
-        title="Go to Date time Picker"
-      /> */}
-      {/* <Button
-        onPress={() => navigation.navigate("Color")}
-        title="Add a color"
-      /> */}
-      {/* <Button
-        onPress={() => navigation.navigate("Square")}
-        title="Square Screen"
-      /> */}
-
       <TouchableOpacity
         onPress={() => navigation.navigate("Library")}
         style={styles.buttonStyle}
