@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  FlatList,
+  TouchableOpacity
+} from "react-native";
 
 const ColorScreen = () => {
   const [colors, setColors] = useState([]);
@@ -7,12 +14,21 @@ const ColorScreen = () => {
 
   return (
     <View>
-      <Button
+      {/* <Button
         title="Add: a color"
         onPress={() => {
           setColors([...colors, randomRgb()]);
         }}
-      />
+      /> */}
+
+      <TouchableOpacity
+        onPress={() => {
+          setColors([...colors, randomRgb()]);
+        }}
+        style={styles.buttonStyle}
+      >
+        <Text style={styles.text}>Add a color</Text>
+      </TouchableOpacity>
 
       <FlatList
         keyExtractor={item => item}
@@ -36,6 +52,17 @@ const randomRgb = () => {
   return `rgb(${red},${green}, ${blue})`;
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 20,
+    color: "white"
+  },
+  buttonStyle: {
+    margin: 10,
+    alignItems: "center",
+    backgroundColor: "#ff7070",
+    padding: 3
+  }
+});
 
 export default ColorScreen;

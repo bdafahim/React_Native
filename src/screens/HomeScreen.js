@@ -7,6 +7,13 @@ const HomeScreen = ({ navigation }) => {
       <Text style={styles.textHome}>Welcome</Text>
 
       <TouchableOpacity
+        onPress={() => navigation.navigate("DateTime")}
+        style={styles.buttonStyle}
+      >
+        <Text style={styles.text}>Date Time picker</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
         onPress={() => navigation.navigate("Library")}
         style={styles.buttonStyle}
       >
