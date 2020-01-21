@@ -1,48 +1,96 @@
-import React from "react";
+import React, { Component } from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
-const HomeScreen = ({ navigation }) => {
-  return (
-    <View>
-      <Text style={styles.textHome}>Welcome</Text>
+// const HomeScreen = ({ navigation }) => {
+//   return (
+//     <View>
+//       <Text style={styles.textHome}>Welcome</Text>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("DateTime")}
-        style={styles.buttonStyle}
-      >
-        <Text style={styles.text}>Date Time picker</Text>
-      </TouchableOpacity>
+//       <TouchableOpacity
+//         onPress={() => navigation.navigate("DateTime")}
+//         style={styles.buttonStyle}
+//       >
+//         <Text style={styles.text}>Date Time picker</Text>
+//       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Library")}
-        style={styles.buttonStyle}
-      >
-        <Text style={styles.text}>Go to library</Text>
-      </TouchableOpacity>
+//       <TouchableOpacity
+//         onPress={() => navigation.navigate("Library")}
+//         style={styles.buttonStyle}
+//       >
+//         <Text style={styles.text}>Go to library</Text>
+//       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Color")}
-        style={styles.buttonStyle}
-      >
-        <Text style={styles.text}>Add a color</Text>
-      </TouchableOpacity>
+//       <TouchableOpacity
+//         onPress={() => navigation.navigate("Color")}
+//         style={styles.buttonStyle}
+//       >
+//         <Text style={styles.text}>Add a color</Text>
+//       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Square")}
-        style={styles.buttonStyle}
-      >
-        <Text style={styles.text}>Square Screen</Text>
-      </TouchableOpacity>
+//       <TouchableOpacity
+//         onPress={() => navigation.navigate("Square")}
+//         style={styles.buttonStyle}
+//       >
+//         <Text style={styles.text}>Square Screen</Text>
+//       </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Text")}
-        style={styles.buttonStyle}
-      >
-        <Text style={styles.text}>Text Screen</Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
+//       <TouchableOpacity
+//         onPress={() => navigation.navigate("Text")}
+//         style={styles.buttonStyle}
+//       >
+//         <Text style={styles.text}>Text Screen</Text>
+//       </TouchableOpacity>
+//     </View>
+//   );
+// };
+
+export default class HomeScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <View>
+        <Text style={styles.textHome}>Welcome</Text>
+
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate("DateTime")}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.text}>Date Time picker</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate("Library")}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.text}>Go to library</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate("Color")}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.text}>Add a color</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate("Square")}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.text}>Square Screen</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate("Text")}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.text}>Text Screen</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   text: {
@@ -62,4 +110,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HomeScreen;
+// export default HomeScreen;
