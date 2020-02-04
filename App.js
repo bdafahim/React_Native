@@ -6,7 +6,7 @@ import CounterSceen from "./src/screens/CounterSceen";
 import ColorScreen from "./src/screens/ColorScreen";
 import SquareScreen from "./src/screens/SquareScreen";
 import TextScreen from "./src/screens/TextScreen";
-import Card from "./src/screens/Card";
+import CardScreen from "./src/screens/CardScreen";
 import React from "react";
 import { createAppContainer } from "react-navigation";
 const navigator = createStackNavigator(
@@ -18,7 +18,7 @@ const navigator = createStackNavigator(
         Color: ColorScreen,
         Square: SquareScreen,
         Text: TextScreen,
-        card: Card
+        card: CardScreen
     },
     {
         initialRouteName: "Home",
