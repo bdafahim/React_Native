@@ -6,10 +6,55 @@ export default class CardScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity style={styles.card}>
-                    <Image style={styles.cardImage} source={{}} />
-                    <Text styles={styles.cardText}>Title</Text>
-                </TouchableOpacity>
+                <View
+                    style={{
+                        flex: 1,
+                        flexDirection: "column"
+                    }}
+                >
+                    <View
+                        style={{
+                            flex: 1,
+                            flexDirection: "row"
+                        }}
+                    >
+                        <Image
+                            source={require("../../assets/forest.jpg")}
+                            style={{
+                                margin: 10,
+                                width: 50,
+                                height: 50,
+                                borderRadius: 100
+                            }}
+                        ></Image>
+                        <View
+                            style={{
+                                flex: 1,
+                                flexDirection: "column"
+                            }}
+                        >
+                            <Text
+                                style={{
+                                    marginTop: 10,
+                                    fontSize: 20,
+                                    padding: 5,
+                                    color: "#ffffff"
+                                }}
+                            >
+                                Mark's daile digest
+                            </Text>
+                            <Text
+                                style={{
+                                    fontSize: 14,
+                                    padding: 5,
+                                    color: "#ffffff"
+                                }}
+                            >
+                                For Nvember 27, 2019
+                            </Text>
+                        </View>
+                    </View>
+                </View>
             </View>
         );
     }
@@ -18,24 +63,16 @@ export default class CardScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         marginTop: 20,
-        backgroundColor: "#F5FCFF"
-    },
-    card: {
-        backgroundColor: "#fff",
-        marginBottom: 10,
-        marginLeft: "2%",
-        width: "96%",
-        shadowColor: "#000",
-        shadowOpacity: 0.2,
-        shadowOffset: {
-            width: 3,
-            height: 3
-        }
+        backgroundColor: "#6a04b4",
+        height: 150,
+        width: "100%"
     },
     cardImage: {
-        width: 60,
-        height: 60,
-        resizeMode: "cover"
+        width: 40,
+        height: 40,
+        borderRadius: 100
     },
-    cardText: {}
+    cardText: {
+        color: "#ffffff"
+    }
 });
