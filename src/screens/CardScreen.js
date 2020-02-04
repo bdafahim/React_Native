@@ -41,7 +41,7 @@ export default class CardScreen extends Component {
                                     color: "#ffffff"
                                 }}
                             >
-                                Mark's daile digest
+                                Mark's daily digest
                             </Text>
                             <Text
                                 style={{
@@ -50,7 +50,30 @@ export default class CardScreen extends Component {
                                     color: "#ffffff"
                                 }}
                             >
-                                For Nvember 27, 2019
+                                For Noember 27, 2019
+                            </Text>
+                        </View>
+                    </View>
+                    <View
+                        style={{
+                            flex: 1,
+                            flexDirection: "row",
+                            marginTop: 20,
+                            marginBottom: 20
+                        }}
+                    >
+                        <View
+                            style={{
+                                flex: 1,
+                                flexDirection: "column",
+                                alignItems: "center"
+                            }}
+                        >
+                            <Text style={{ fontSize: 30, color: "#ffffff" }}>
+                                14
+                            </Text>
+                            <Text style={{ fontSize: 14, color: "#ffffff" }}>
+                                Tax News
                             </Text>
                         </View>
                     </View>
@@ -63,9 +86,11 @@ export default class CardScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         marginTop: 20,
+        marginLeft: 10,
         backgroundColor: "#6a04b4",
         height: 150,
-        width: "100%"
+        width: "95%",
+        borderRadius: 10
     },
     cardImage: {
         width: 40,
