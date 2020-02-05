@@ -51,6 +51,12 @@ export default class HomeScreen extends Component {
                 >
                     <Text style={styles.text}>Card view</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate("flex")}
+                    style={styles.buttonStyle}
+                >
+                    <Text style={styles.text}>Flex</Text>
+                </TouchableOpacity>
             </View>
         );
     }

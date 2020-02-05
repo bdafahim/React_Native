@@ -7,6 +7,7 @@ import ColorScreen from "./src/screens/ColorScreen";
 import SquareScreen from "./src/screens/SquareScreen";
 import TextScreen from "./src/screens/TextScreen";
 import CardScreen from "./src/screens/CardScreen";
+import FlexScreen from "./src/screens/FlexScreen";
 import React from "react";
 import { createAppContainer } from "react-navigation";
 const navigator = createStackNavigator(
@@ -18,7 +19,8 @@ const navigator = createStackNavigator(
         Color: ColorScreen,
         Square: SquareScreen,
         Text: TextScreen,
-        card: CardScreen
+        card: CardScreen,
+        flex: FlexScreen
     },
     {
         initialRouteName: "Home",
